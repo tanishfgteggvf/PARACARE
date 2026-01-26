@@ -28,6 +28,7 @@
             min-height: 100vh;
         }
         
+        /* Liquid Glass Panels */
         .glass-panel {
             background: var(--glass-bg);
             backdrop-filter: blur(12px) saturate(180%);
@@ -62,10 +63,10 @@
             border: 1px solid rgba(255, 255, 255, 0.2);
         }
 
-        /* Fixed Navigation Z-Index and Spacing */
+        /* Fixed Navigation Z-Index */
         .glass-nav { 
             backdrop-filter: blur(20px); 
-            background: rgba(255, 255, 255, 0.8); 
+            background: rgba(255, 255, 255, 0.85); 
             border: 1px solid rgba(255, 255, 255, 0.8);
             margin: 15px auto;
             border-radius: 20px;
@@ -77,15 +78,24 @@
             z-index: 1000;
         }
         
-        /* Hero Section Spacing Fix */
+        /* Hero Section Spacing & Hierarchy Fix */
         .hero-section {
-            padding-top: 160px; /* Forces content below the navbar */
+            padding-top: 200px; /* High padding to clear the navbar completely */
+            padding-bottom: 80px;
             min-height: 90vh;
             display: flex;
             flex-direction: column;
             align-items: center;
             justify-content: center;
             text-align: center;
+            position: relative;
+            z-index: 10;
+        }
+
+        .est-text {
+            margin-top: 10px;
+            display: block;
+            text-shadow: 0 2px 4px rgba(0,0,0,0.05);
         }
 
         .dropdown-menu { 
@@ -98,30 +108,31 @@
         .dropdown:hover .dropdown-menu { display: block; }
 
         .bg-blob {
-            position: fixed; width: 500px; height: 500px;
-            background: radial-gradient(circle, rgba(211, 47, 47, 0.08) 0%, rgba(255,255,255,0) 70%);
+            position: fixed; width: 600px; height: 600px;
+            background: radial-gradient(circle, rgba(211, 47, 47, 0.1) 0%, rgba(255,255,255,0) 70%);
             z-index: -1; border-radius: 50%;
         }
 
         #productDetailView { 
             display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; 
-            background: rgba(255, 255, 255, 0.95); backdrop-filter: blur(25px);
+            background: rgba(255, 255, 255, 0.98); backdrop-filter: blur(25px);
             z-index: 3000; overflow-y: auto; padding: 40px 20px; 
         }
 
         .glass-input {
-            background: rgba(255, 255, 255, 0.7);
-            border: 1px solid rgba(255, 255, 255, 1);
+            background: rgba(255, 255, 255, 0.8);
+            border: 1px solid white;
             border-radius: 15px;
             padding: 16px;
             width: 100%;
             outline: none;
+            box-shadow: inset 0 2px 4px rgba(0,0,0,0.02);
         }
     </style>
 </head>
 <body> 
-    <div class="bg-blob" style="top: -100px; right: -100px;"></div>
-    <div class="bg-blob" style="bottom: 100px; left: -200px; background: radial-gradient(circle, rgba(100, 100, 255, 0.05) 0%, rgba(255,255,255,0) 70%);"></div>
+    <div class="bg-blob" style="top: -150px; right: -150px;"></div>
+    <div class="bg-blob" style="bottom: 100px; left: -250px; background: radial-gradient(circle, rgba(100, 100, 255, 0.05) 0%, rgba(255,255,255,0) 70%);"></div>
 
     <header class="glass-nav py-4 px-6 md:px-12 flex justify-between items-center">
         <a href="#"><img src="images/a.png" alt="ParaCare" class="w-32 md:w-36"></a>
@@ -145,8 +156,10 @@
 
     <section class="hero-section">
         <div data-aos="fade-up" class="px-4">
-            <span class="text-red-700 font-bold uppercase tracking-[0.5em] text-[12px] mb-6 block">Est. 2018 • North Goa</span>
-            <h1 class="font-serif text-6xl md:text-9xl leading-[1] mb-10 text-slate-900">
+            <span class="est-text text-red-700 font-bold uppercase tracking-[0.5em] text-[12px] mb-8">
+                Est. 2018 • North Goa
+            </span>
+            <h1 class="font-serif text-6xl md:text-9xl leading-[1.1] mb-10 text-slate-900">
                 Pure <span class="italic text-red-600 font-light">Precision.</span><br>Total Care.
             </h1>
             <p class="text-slate-600 text-lg md:text-xl max-w-xl mx-auto leading-relaxed mb-12">

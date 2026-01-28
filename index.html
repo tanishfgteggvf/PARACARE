@@ -3,202 +3,128 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Luxury Resort & Hotel</title>
-    <!-- Google Fonts for Montserrat -->
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <!-- Tailwind CSS -->
+    <title>Safe. More. Resort & Spa</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <!-- FontAwesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <!-- Custom Tailwind Config for Colors and Font -->
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    colors: {
-                        'forest-green': '#2D5A47',
-                        'soft-cream': '#F5F5DC',
-                        'slate-gray': '#708090',
-                    },
-                    fontFamily: {
-                        'montserrat': ['Montserrat', 'sans-serif'],
-                    }
-                }
-            }
-        }
-    </script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap');
+        body { font-family: 'Inter', sans-serif; }
+        .bg-resort-green { background-color: #2D5A47; }
+        .text-resort-green { color: #2D5A47; }
+    </style>
 </head>
-<body class="font-montserrat bg-soft-cream text-slate-gray">
-    <!-- Top Header -->
-    <header class="bg-forest-green text-soft-cream">
-        <!-- Notification Bar -->
-        <div class="text-center py-2 text-sm">
-            <p>Exclusive Offer: 20% off on weekend stays! Book now.</p>
-        </div>
-        <!-- Main Navbar -->
-        <nav class="flex justify-between items-center px-6 py-4">
-            <div class="text-2xl font-bold">Luxury Resort</div>
-            <ul class="hidden md:flex space-x-6">
-                <li><a href="#" class="hover:text-slate-gray transition">Home</a></li>
-                <li><a href="#" class="hover:text-slate-gray transition">Dining</a></li>
-                <li><a href="#" class="hover:text-slate-gray transition">Amenities</a></li>
-                <li><a href="#" class="hover:text-slate-gray transition">Gallery</a></li>
-                <li><a href="#" class="hover:text-slate-gray transition">Contact</a></li>
-            </ul>
-            <button class="bg-slate-gray text-soft-cream px-4 py-2 rounded hover:bg-forest-green transition">
-                <i class="fas fa-search"></i> Search
-            </button>
-            <!-- Mobile Menu Toggle (for simplicity, not fully implemented) -->
-            <div class="md:hidden">
-                <i class="fas fa-bars"></i>
-            </div>
-        </nav>
-    </header>
+<body class="bg-gray-50">
 
-    <!-- Booking Bar -->
-    <section class="bg-white shadow-md py-4 px-6 sticky top-0 z-10">
-        <div class="flex flex-col md:flex-row items-center justify-between space-y-4 md:space-y-0">
-            <div class="flex space-x-4">
-                <input type="date" class="border border-slate-gray px-4 py-2 rounded" placeholder="Check-in Date">
-                <select class="border border-slate-gray px-4 py-2 rounded">
-                    <option>1 Guest</option>
-                    <option>2 Guests</option>
-                    <option>3 Guests</option>
-                    <option>4+ Guests</option>
-                </select>
-            </div>
-            <button class="bg-forest-green text-soft-cream px-6 py-2 rounded hover:bg-slate-gray transition">
-                Book Now
-            </button>
+    <div class="bg-resort-green text-white py-4 px-10 flex justify-between items-center">
+        <div>
+            <h1 class="text-3xl font-bold tracking-tighter">SAFE. MORE.</h1>
+            <p class="text-xs italic">Get the most out your stay</p>
         </div>
-    </section>
+        <div class="hidden md:block">
+            <img src="https://via.placeholder.com/150x40/ffffff/2D5A47?text=RESORT+POOL" alt="pool" class="rounded shadow-lg">
+        </div>
+    </div>
 
-    <!-- Hero Section -->
-    <section class="py-12 px-6">
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-            <!-- Deluxe Room Card -->
-            <div class="relative bg-cover bg-center h-64 rounded-lg overflow-hidden hover:scale-105 transition transform" style="background-image: url('https://via.placeholder.com/400x300?text=Deluxe+Room');">
-                <div class="absolute inset-0 bg-black bg-opacity-50 flex flex-col justify-end p-6">
-                    <h3 class="text-soft-cream text-2xl font-bold">Deluxe Room</h3>
-                    <p class="text-soft-cream">Luxurious comfort for your stay.</p>
-                    <button class="mt-4 bg-forest-green text-soft-cream px-4 py-2 rounded hover:bg-slate-gray transition">View Details</button>
+    <nav class="bg-white border-b sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 flex flex-wrap justify-between items-center py-4">
+            <div class="flex space-x-6 font-semibold text-gray-600 text-sm">
+                <a href="#" class="text-resort-green border-b-2 border-resort-green">HOME</a>
+                <a href="#" class="hover:text-resort-green transition">DINING</a>
+                <a href="#" class="hover:text-resort-green transition">AMENITIES</a>
+                <a href="#" class="hover:text-resort-green transition">GALLERY</a>
+                <a href="#" class="hover:text-resort-green transition">CONTACT</a>
+            </div>
+            <button class="bg-resort-green text-white px-6 py-2 rounded text-sm font-bold hover:bg-opacity-90">SEARCH</button>
+        </div>
+    </nav>
+
+    <div class="max-w-5xl mx-auto -mt-6 bg-white shadow-xl rounded-lg p-4 grid grid-cols-1 md:grid-cols-4 gap-4 relative z-10 border border-gray-100">
+        <div>
+            <label class="block text-[10px] uppercase font-bold text-gray-400">Check-in Date</label>
+            <input type="date" class="w-full text-sm border-none focus:ring-0 p-0 text-gray-700">
+        </div>
+        <div>
+            <label class="block text-[10px] uppercase font-bold text-gray-400">Guests</label>
+            <select class="w-full text-sm border-none focus:ring-0 p-0 text-gray-700">
+                <option>2 Adults, 0 Children</option>
+                <option>1 Adult</option>
+            </select>
+        </div>
+        <div class="md:col-span-2 flex items-end">
+            <button class="w-full bg-resort-green text-white py-3 rounded font-bold hover:bg-green-900 transition uppercase text-xs tracking-widest">Book Now</button>
+        </div>
+    </div>
+
+    <main class="max-w-7xl mx-auto px-4 py-12">
+        <h2 class="text-2xl font-semibold text-gray-800 mb-8">Find Your Dream Escape. Book Now</h2>
+
+        <div class="space-y-8">
+            <div class="flex flex-col md:flex-row bg-white overflow-hidden shadow-sm group">
+                <div class="md:w-2/3 overflow-hidden">
+                    <img src="https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=800&q=80" class="w-full h-[400px] object-cover group-hover:scale-105 transition duration-500">
+                </div>
+                <div class="md:w-1/3 bg-resort-green text-white p-10 flex flex-col justify-center">
+                    <h3 class="text-2xl font-light mb-4 italic">Deluxe Room</h3>
+                    <p class="text-sm font-light leading-relaxed mb-6 opacity-80">Experience unparalleled luxury in our master suites, featuring panoramic ocean views and bespoke interior design.</p>
+                    <button class="border border-white/50 px-6 py-2 self-start text-xs uppercase hover:bg-white hover:text-resort-green transition">View Details</button>
                 </div>
             </div>
-            <!-- Short Stay Card -->
-            <div class="relative bg-cover bg-center h-64 rounded-lg overflow-hidden hover:scale-105 transition transform" style="background-image: url('https://via.placeholder.com/400x300?text=Short+Stay');">
-                <div class="absolute inset-0 bg-black bg-opacity-50 flex flex-col justify-end p-6">
-                    <h3 class="text-soft-cream text-2xl font-bold">Short Stay</h3>
-                    <p class="text-soft-cream">Perfect for quick getaways.</p>
-                    <button class="mt-4 bg-forest-green text-soft-cream px-4 py-2 rounded hover:bg-slate-gray transition">View Details</button>
+
+            <div class="flex flex-col md:flex-row-reverse bg-white overflow-hidden shadow-sm group">
+                <div class="md:w-2/3 overflow-hidden">
+                    <img src="https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?auto=format&fit=crop&w=800&q=80" class="w-full h-[400px] object-cover group-hover:scale-105 transition duration-500">
                 </div>
-            </div>
-            <!-- Family Card -->
-            <div class="relative bg-cover bg-center h-64 rounded-lg overflow-hidden hover:scale-105 transition transform" style="background-image: url('https://via.placeholder.com/400x300?text=Family+Suite');">
-                <div class="absolute inset-0 bg-black bg-opacity-50 flex flex-col justify-end p-6">
-                    <h3 class="text-soft-cream text-2xl font-bold">Family Suite</h3>
-                    <p class="text-soft-cream">Spacious and family-friendly.</p>
-                    <button class="mt-4 bg-forest-green text-soft-cream px-4 py-2 rounded hover:bg-slate-gray transition">View Details</button>
+                <div class="md:w-1/3 bg-resort-green text-white p-10 flex flex-col justify-center">
+                    <h3 class="text-2xl font-light mb-4 italic">Leisure Short Stays</h3>
+                    <p class="text-sm font-light leading-relaxed mb-6 opacity-80">Perfect for weekend getaways. Enjoy modern amenities and quick access to our private beach clubs.</p>
+                    <button class="border border-white/50 px-6 py-2 self-start text-xs uppercase hover:bg-white hover:text-resort-green transition">View Details</button>
                 </div>
             </div>
         </div>
-    </section>
 
-    <!-- Relaxation & Spa Section -->
-    <section class="py-12 px-6 bg-slate-gray text-soft-cream">
-        <h2 class="text-3xl font-bold text-center mb-8">Relaxation & Spa</h2>
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-            <div class="text-center">
-                <img src="https://via.placeholder.com/300x200?text=Spa+1" alt="Spa 1" class="w-full h-48 object-cover rounded-lg hover:opacity-80 transition">
-                <h3 class="mt-4 text-xl font-semibold">Massage Therapy</h3>
-                <p>Indulge in our expert massages.</p>
+        <section class="mt-20">
+            <h3 class="text-xl font-bold mb-8">Relaxation & Spa</h3>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="bg-blue-50/50 p-4">
+                    <img src="https://images.unsplash.com/photo-1576013551627-0cc20b96c2a7?auto=format&fit=crop&w=400&q=80" class="w-full h-48 object-cover mb-4">
+                    <h4 class="font-bold">Infinity Pool</h4>
+                    <p class="text-xs text-gray-500 mt-2">Open daily for sunset swimming sessions.</p>
+                </div>
+                <div class="bg-blue-50/50 p-4">
+                    <img src="https://images.unsplash.com/photo-1544148103-0773bf10d330?auto=format&fit=crop&w=400&q=80" class="w-full h-48 object-cover mb-4">
+                    <h4 class="font-bold">Fine Dining</h4>
+                    <p class="text-xs text-gray-500 mt-2">World-class chefs preparing local delicacies.</p>
+                </div>
+                <div class="bg-blue-50/50 p-6 flex flex-col justify-center">
+                    <h4 class="text-xl italic mb-2">Ocean View Suites</h4>
+                    <p class="text-sm text-gray-600 mb-4">Wake up to the sound of waves every single morning.</p>
+                    <button class="text-xs font-bold text-resort-green border-b border-resort-green self-start">VIEW MORE</button>
+                </div>
             </div>
-            <div class="text-center">
-                <img src="https://via.placeholder.com/300x200?text=Spa+2" alt="Spa 2" class="w-full h-48 object-cover rounded-lg hover:opacity-80 transition">
-                <h3 class="mt-4 text-xl font-semibold">Yoga Sessions</h3>
-                <p>Find peace with guided yoga.</p>
-            </div>
-            <div class="text-center">
-                <img src="https://via.placeholder.com/300x200?text=Spa+3" alt="Spa 3" class="w-full h-48 object-cover rounded-lg hover:opacity-80 transition">
-                <h3 class="mt-4 text-xl font-semibold">Sauna & Steam</h3>
-                <p>Relax in our premium facilities.</p>
-            </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- About Us Section -->
-    <section class="py-12 px-6">
-        <h2 class="text-3xl font-bold text-center mb-8">About Us</h2>
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-            <img src="https://via.placeholder.com/600x400?text=Resort+View" alt="Resort View" class="w-full h-64 object-cover rounded-lg hover:opacity-80 transition">
-            <div class="flex flex-col justify-center">
-                <p class="text-lg">Nestled in the heart of nature, our luxury resort offers unparalleled comfort and elegance. Experience world-class amenities and breathtaking views.</p>
-                <button class="mt-4 bg-forest-green text-soft-cream px-4 py-2 rounded hover:bg-slate-gray transition self-start">Learn More</button>
-            </div>
-        </div>
-    </section>
+    </main>
 
-    <!-- Info Grid Section -->
-    <section class="py-12 px-6 bg-forest-green text-soft-cream">
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-            <!-- Map Placeholder -->
-            <div>
-                <h3 class="text-xl font-bold mb-4">Location</h3>
-                <img src="https://via.placeholder.com/400x300?text=Map" alt="Map" class="w-full h-48 object-cover rounded-lg">
-            </div>
-            <!-- Contact Details -->
-            <div>
-                <h3 class="text-xl font-bold mb-4">Contact Us</h3>
-                <p><i class="fas fa-phone"></i> +1 (123) 456-7890</p>
-                <p><i class="fas fa-envelope"></i> info@luxuryresort.com</p>
-                <p><i class="fas fa-map-marker-alt"></i> 123 Resort Lane, Paradise City</p>
-            </div>
-            <!-- Facility Highlights -->
-            <div class="md:col-span-2">
-                <h3 class="text-xl font-bold mb-4">Facility Highlights</h3>
-                <ul class="grid grid-cols-1 md:grid-cols-2 gap-4">
-                    <li><i class="fas fa-swimming-pool"></i> Infinity Pool</li>
-                    <li><i class="fas fa-utensils"></i> Gourmet Dining</li>
-                    <li><i class="fas fa-dumbbell"></i> Fitness Center</li>
-                    <li><i class="fas fa-tree"></i> Nature Trails</li>
-                </ul>
-            </div>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer class="bg-slate-gray text-soft-cream py-8 px-6">
-        <div class="grid grid-cols-1 md:grid-cols-4 gap-6">
-            <div>
-                <h4 class="font-bold mb-4">Luxury Resort</h4>
-                <p>Your gateway to luxury and relaxation.</p>
+    <footer class="bg-gray-100 py-12 border-t mt-20">
+        <div class="max-w-7xl mx-auto px-4 grid grid-cols-1 md:grid-cols-4 gap-12">
+            <div class="col-span-2">
+                <h4 class="font-bold text-resort-green mb-4">ABOUT US</h4>
+                <p class="text-sm text-gray-600 leading-relaxed">We are dedicated to providing the most luxurious and safe environment for your family vacations and business retreats.</p>
             </div>
             <div>
-                <h4 class="font-bold mb-4">Quick Links</h4>
-                <ul>
-                    <li><a href="#" class="hover:text-forest-green transition">Home</a></li>
-                    <li><a href="#" class="hover:text-forest-green transition">Rooms</a></li>
-                    <li><a href="#" class="hover:text-forest-green transition">Spa</a></li>
-                    <li><a href="#" class="hover:text-forest-green transition">Contact</a></li>
+                <h4 class="font-bold text-gray-800 mb-4">QUICK LINKS</h4>
+                <ul class="text-sm space-y-2 text-gray-500">
+                    <li><a href="#" class="hover:text-resort-green">Rooms & Suites</a></li>
+                    <li><a href="#" class="hover:text-resort-green">Spa & Wellness</a></li>
+                    <li><a href="#" class="hover:text-resort-green">Privacy Policy</a></li>
                 </ul>
             </div>
             <div>
-                <h4 class="font-bold mb-4">Follow Us</h4>
-                <div class="flex space-x-4">
-                    <a href="#" class="hover:text-forest-green transition"><i class="fab fa-facebook-f"></i></a>
-                    <a href="#" class="hover:text-forest-green transition"><i class="fab fa-twitter"></i></a>
-                    <a href="#" class="hover:text-forest-green transition"><i class="fab fa-instagram"></i></a>
-                    <a href="#" class="hover:text-forest-green transition"><i class="fab fa-linkedin-in"></i></a>
-                </div>
+                <h4 class="font-bold text-gray-800 mb-4">CONTACT</h4>
+                <p class="text-sm text-gray-500">123 Resort Blvd, Tropical Island<br>+1 234 567 890</p>
             </div>
-            <div>
-                <h4 class="font-bold mb-4">Newsletter</h4>
-                <input type="email" placeholder="Your email" class="w-full px-4 py-2 rounded mb-2">
-                <button class="bg-forest-green text-soft-cream px-4 py-2 rounded hover:bg-slate-gray transition">Subscribe</button>
-            </div>
-        </div>
-        <div class="text-center mt-8 border-t border-soft-cream pt-4">
-            <p>&copy; 2023 Luxury Resort. All rights reserved.</p>
         </div>
     </footer>
+
 </body>
 </html>
